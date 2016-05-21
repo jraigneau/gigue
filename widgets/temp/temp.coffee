@@ -1,4 +1,4 @@
-class Dashing.Number extends Dashing.Widget
+class Dashing.Temp extends Dashing.Widget
   @accessor 'current', Dashing.AnimatedValue
 
   onData: (data) ->
@@ -8,3 +8,7 @@ class Dashing.Number extends Dashing.Widget
         c.replace /\bstatus-\S+/g, ''
       # add new class
       $(@get('node')).addClass "status-#{data.status}"
+    if data.current < 18
+      $(@node).css('background-color', '#47BBB3')
+    if data.current > 25
+      $(@node).css('background-color', '#F64B22')
