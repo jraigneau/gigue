@@ -23,7 +23,7 @@ SCHEDULER.every "15m", :first_in => 0 do |job|
 
   if results
   forecasts = []
-	for day in (0..4) 
+	for day in (0..3) 
 		day = results[day]
 
 		this_day = {
