@@ -8,7 +8,7 @@ class Dashing.Trafficy extends Dashing.Widget
         c.replace /\bstatus-\S+/g, ''
       # add new class
       $(@get('node')).addClass "status-#{data.status}"
-    if data.moreinfo < 5
+    if data.delay < 5
       $(@node).css('background-color', '#74f229')
-    if data.moreinfo > 30
+    if data.delay > 30
       $(@node).css('background-color', '#e64141')
